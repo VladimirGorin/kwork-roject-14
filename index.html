@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Офисный центр</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo logo"><img src="/img/logo.svg" alt="logo"></a>
+                <nav class="nav">
+                    <div class="close close-menu">
+                        <span></span>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="available-offices.html" class="nav__link">Доступные офисы</a></li>
+                        <li class="nav__item"><a href="photo-gallery.html" class="nav__link">ФОТОГАЛЕРЕЯ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">ОБ ОФИСНОМ ЦЕНТРЕ</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <a href="#" class="header__like-office like-office"><img src="/img/like.svg" alt="like">
+                        <span class="like-office__number">3</span>
+                    </a>
+                    <a href="#" class="header__location location"><img src="/img/location.svg" alt="location">
+                        <div class="location__text">
+                            <p class="location__address">ул. Вавилова, 62В</p>
+                            <span class="location__city">г. Ростов-на-Дону</span>
+                        </div>
+                    </a>
+                    <button class="header__btn-callback btn-callback" type="button">Заказать звонок</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="modal-callback">
+        <div class="modal__content">
+            <div class="close modal-callback__close">
+                <span></span>
+            </div>
+            <p class="modal-callback__title">Заказать звонок</p>
+            <form action="" class="modal-callback__form">
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваше имя</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваше имя">
+                </div>
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваш телефон</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваш номер">
+                </div>
+                <button class="modal-callback__btn btn-green" type="submit">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </div>
+
+   <div class="filter">
+       <div class="container">
+           <div class="filter__content">
+                <form action="" class="filter-form">
+                    <div class="filter-area filter-block">
+                        <p class="filter-name">Площадь</p>
+                        <div class="filter-block__inputs">
+                            <div class="filter-input__block-one input-border">
+                                <span class="filter-input__placeholder">от</span>
+                                <input class="input-one" type="text" placeholder="0">
+                                <span class="filter-input__placeholder-toue">м<span>2</span></span>
+                            </div>
+                            <div class="filter-input__block-one filter-input__block-toue">
+                                <span class="filter-input__placeholder">до</span>
+                                <input type="text" placeholder="60">
+                                <span class="filter-input__placeholder-toue">м<span>2</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-dropdown">
+                        <p class="filter-name">Этаж</p>
+                        <button type="button" class="dropdown__btn">1 этаж<i class="arrow down filter-arrow"></i></button>
+                        <div class="filter-dropdown__content">
+                            <input id="filter-01-drop" type="checkbox" class="filter-input-check"><label for="filter-01-drop" class="filter-checkbox">Любой</label>
+                            <input id="filter-02-drop" type="checkbox" class="filter-input-check"><label for="filter-02-drop" class="filter-checkbox">1 этаж</label>
+                            <input id="filter-03-drop" type="checkbox" class="filter-input-check"><label for="filter-03-drop" class="filter-checkbox">2 этаж</label>
+                            <input id="filter-04-drop" type="checkbox" class="filter-input-check"><label for="filter-04-drop" class="filter-checkbox">3 этаж</label>
+                            <input id="filter-05-drop" type="checkbox" class="filter-input-check"><label for="filter-05-drop" class="filter-checkbox">4 этаж</label>
+                            <input id="filter-06-drop" type="checkbox" class="filter-input-check"><label for="filter-06-drop" class="filter-checkbox">5 этаж</label>  
+                        </div>                                                    
+                    </div>
+                    <div class="filter-area filter-block">
+                        <p class="filter-name">Стоимость аренды в мес.</p>
+                        <div class="filter-block__inputs">
+                            <div class="filter-input__block-one input-border">
+                                <span class="filter-input__placeholder">от</span>
+                                <input class="input-one" type="text" placeholder="0">
+                            </div>
+                            <div class="filter-input__block-one filter-input__block-toue">
+                                <span class="filter-input__placeholder">до</span>
+                                <input type="text" placeholder="20000">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-dropdown">
+                        <p class="filter-name">вид из окна</p>
+                        <button type="button" class="dropdown__btn dropdown__btn-02">Внутренний двор<i class="arrow down filter-arrow"></i></button>
+                        <div class="filter-dropdown__content">
+                            <input id="filter-07-drop" type="checkbox" class="filter-input-check"><label for="filter-07-drop" class="filter-checkbox">Любой</label>
+                            <input id="filter-08-drop" type="checkbox" class="filter-input-check"><label for="filter-08-drop" class="filter-checkbox">1 этаж</label>
+                            <input id="filter-09-drop" type="checkbox" class="filter-input-check"><label for="filter-09-drop" class="filter-checkbox">2 этаж</label>
+                            <input id="filter-10-drop" type="checkbox" class="filter-input-check"><label for="filter-10-drop" class="filter-checkbox">3 этаж</label>
+                            <input id="filter-11-drop" type="checkbox" class="filter-input-check"><label for="filter-11-drop" class="filter-checkbox">4 этаж</label>
+                            <input id="filter-12-drop" type="checkbox" class="filter-input-check"><label for="filter-12-drop" class="filter-checkbox">5 этаж</label>  
+                        </div>                                                    
+                    </div>
+                    <input type="submit" value="Поиск" class="filter__btn btn-green">
+                </form>
+           </div>
+       </div>
+   </div>
+
+
+    <div class="bg-slider swiper">
+        <div class="bg-slider__content swiper-wrapper">
+            <div class="bg-slider__block swiper-slide">
+                <img src="/img/bg-slider/01.svg" alt="img-building">
+                <div class="container">
+                    <div class="bg-slider__text">
+                        <div class="bg-slider__text-top">
+                            <p class="bg-slider__text-title">5 этаж</p>
+                            <p class="bg-slider__text__available-offices">Доступных <br> офисов:<span>9</span></p>
+                        </div>
+                        <button type="button" class="bg-slider__btn btn-green">Посмотреть</button>
+                    </div>
+                </div>
+                <p class="bg-slider__name-street">ул. ВАВИЛОВА</p>
+            </div>
+            <div class="bg-slider__block swiper-slide">
+                <img src="/img/bg-slider/02.svg" alt="img-building">
+                <div class="container">
+                    <div class="bg-slider__text">
+                        <div class="bg-slider__text-top">
+                            <p class="bg-slider__text-title">5 этаж</p>
+                            <p class="bg-slider__text__available-offices">Доступных <br> офисов:<span>9</span></p>
+                        </div>
+                        <button type="button" class="bg-slider__btn">Посмотреть</button>
+                    </div>
+                </div>
+                <p class="bg-slider__name-street">ВНУТРЕННИЙ ДВОР</p>
+            </div>
+        </div>
+        <div class="bg-slider__pagination">
+            <div class="bg-slider__pagination-nav">
+                <button type="button" class="bg-slider-prew swiper-button-prev"><img src="/img/arrow-left.svg" alt="arrow-left"></button>
+                <button type="button" class="bg-slider-next swiper-button-next"><img src="/img/arrow-right.svg" alt="arrow-right"></button>
+            </div>
+            <span class="bg-slider__number swiper-pagination"></span>
+        </div>
+    </div>
+    
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/modal.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

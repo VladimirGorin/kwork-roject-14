@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Офисный центр</title>
+    <link rel="stylesheet" href="./css/photo-gallery-logic.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./css/photo-gallery.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo logo"><img src="./img/logo.svg" alt="logo"></a>
+                <nav class="nav">
+                    <div class="close close-menu">
+                        <span></span>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="available-offices.html" class="nav__link">Доступные офисы</a></li>
+                        <li class="nav__item"><a href="photo-gallery.html" class="nav__link">ФОТОГАЛЕРЕЯ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">ОБ ОФИСНОМ ЦЕНТРЕ</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <a href="#" class="header__like-office like-office"><img src="./img/like.svg" alt="like">
+                        <span class="like-office__number">3</span>
+                    </a>
+                    <a href="#" class="header__location location"><img src="./img/location.svg" alt="location">
+                        <div class="location__text">
+                            <p class="location__address">ул. Вавилова, 62В</p>
+                            <span class="location__city">г. Ростов-на-Дону</span>
+                        </div>
+                    </a>
+                    <button class="header__btn-callback btn-callback" type="button">Заказать звонок</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal-callback">
+        <div class="modal__content">
+            <div class="close modal-callback__close">
+                <span></span>
+            </div>
+            <p class="modal-callback__title">Заказать звонок</p>
+            <form action="" class="modal-callback__form">
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваше имя</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваше имя">
+                </div>
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваш телефон</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваш номер">
+                </div>
+                <button class="modal-callback__btn btn-green" type="submit">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+    <div class="container">
+        <p class="photo-gallery__title title">Фотогалерея</p>
+        <div class="photo-gallery_Desktop">
+            <p class="photo-gallery-block__title" >Офисы</p>
+            <div>
+                <div class="row1">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb1" src="./img/offices/03.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb2"  src="./img/offices/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb3" src="img/offices/02.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img  id="bbb4"  src="img/offices/02.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img  id="bbb5"  src="img/offices/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img  id="bbb6"  src="img/offices/03.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                </div>
+            </div>
+        </div>
+        <div id="bloc1ked" class="swiper photo-gallery">
+                <p class="photo-gallery-block__title">Офисы</p>
+                <div class="swiper-wrapper photo-gallery__wrapper">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/02.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/03.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/04.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/06.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/05.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/06.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="swiper-button-next photo-gallery__btn-next"></div>
+                <div class="swiper-button-prev photo-gallery__btn-prev"></div>
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="photo-gallery_Desktop">
+            <p id="Holl" class="photo-gallery-block__title" >Холл</p>
+            <div>
+                <div class="row3">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb1" src="./img/photo-gallery/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbbb2"  src="./img/photo-gallery/02.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb3" src="./img/photo-gallery/03.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="row4">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb4" src="./img/photo-gallery/04.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbbb5"  src="./img/photo-gallery/06.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb6" src="./img/photo-gallery/05.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                </div>
+            </div>
+        </div>
+        <div id="bloc1ked"  class="swiper photo-gallery">
+            <p class="photo-gallery-block__title">Холл</p>
+            <div class="swiper-wrapper photo-gallery__wrapper">
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/01.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/02.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/03.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/04.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/05.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/06.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/07.svg" alt="office-img">
+                </div>
+            </div>
+            <div class="swiper-button-next photo-gallery__btn-next"></div>
+            <div class="swiper-button-prev photo-gallery__btn-prev"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="photo-gallery_Desktop">
+            <p id="Hl" class="photo-gallery-block__title" >Места общего пользования</p>
+            <div>
+                <div class="row5">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb1" src="./img/offices/03.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb2"  src="./img/offices/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb3" src="img/offices/02.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="row6">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img  id="bbb4"  src="img/offices/02.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img  id="bbb5"  src="img/offices/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img  id="bbb6"  src="img/offices/03.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                </div>
+            </div>
+        </div>
+        <div id="bloc1ked"  class="swiper photo-gallery">
+                <p class="photo-gallery-block__title">Места общего пользования</p>
+                <div class="swiper-wrapper photo-gallery__wrapper">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/02.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/03.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/04.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/06.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/05.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img src="img/photo-gallery/06.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="swiper-button-next photo-gallery__btn-next"></div>
+                    <div class="swiper-button-prev photo-gallery__btn-prev"></div>
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="photo-gallery_Desktop">
+            <p id="Hlj" class="photo-gallery-block__title" >Территория</p>
+            <div>
+                <div class="row7">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb1" src="./img/photo-gallery/01.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbbb2"  src="./img/photo-gallery/02.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb3" src="./img/photo-gallery/03.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="row8">
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb4" src="./img/photo-gallery/04.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbbb5"  src="./img/photo-gallery/06.svg" alt="office-img">
+                    </div>
+                    <div class="swiper-slide photo-gallery__slide">
+                        <img id="bbb6" src="./img/photo-gallery/05.svg" alt="office-img">
+                    </div>
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                </div>
+            </div>
+        </div>
+        <div id="bloc1ked"  class="swiper photo-gallery">
+            <p class="photo-gallery-block__title">Территория</p>
+            <div class="swiper-wrapper photo-gallery__wrapper">
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/01.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/02.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/03.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/04.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/05.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/06.svg" alt="office-img">
+                </div>
+                <div class="swiper-slide photo-gallery__slide">
+                    <img src="img/offices/07.svg" alt="office-img">
+                </div>
+            </div>
+            <div class="swiper-button-next photo-gallery__btn-next"></div>
+            <div class="swiper-button-prev photo-gallery__btn-prev"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

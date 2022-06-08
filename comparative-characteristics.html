@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Офисный центр</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/comparative-characteristics.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo logo"><img src="/img/logo.svg" alt="logo"></a>
+                <nav class="nav">
+                    <div class="close close-menu">
+                        <span></span>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="available-offices.html" class="nav__link">Доступные офисы</a></li>
+                        <li class="nav__item"><a href="photo-gallery.html" class="nav__link">ФОТОГАЛЕРЕЯ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">ОБ ОФИСНОМ ЦЕНТРЕ</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <a href="#" class="header__like-office like-office"><img src="/img/like.svg" alt="like">
+                        <span class="like-office__number">3</span>
+                    </a>
+                    <a href="#" class="header__location location"><img src="/img/location.svg" alt="location">
+                        <div class="location__text">
+                            <p class="location__address">ул. Вавилова, 62В</p>
+                            <span class="location__city">г. Ростов-на-Дону</span>
+                        </div>
+                    </a>
+                    <button class="header__btn-callback btn-callback" type="button">Заказать звонок</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="modal-callback">
+        <div class="modal__content">
+            <div class="close modal-callback__close">
+                <span></span>
+            </div>
+            <p class="modal-callback__title">Заказать звонок</p>
+            <form action="" class="modal-callback__form">
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваше имя</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваше имя">
+                </div>
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваш телефон</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваш номер">
+                </div>
+                <button class="modal-callback__btn btn-green" type="submit">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="comparative-characteristics">
+        <div class="container">
+            <div class="comparative-characteristics__content">
+                <p class="comparative-characteristics__title title">Сравнительные характеристики</p>
+                <button type="button" class="comparative-characteristics__delete-block">
+                    <img src="img/delete.svg" alt="delete">
+                   Удалить весь список
+                </button>
+            </div>
+
+            <div class="comparative-characteristics__body">
+                <div class="swiper comparative-characteristics__slider">
+                    <div class="swiper-wrapper comparative-characteristics__wrapper">
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/office-information.svg" alt="office-photo">
+                        </div>
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/office-information.svg" alt="office-photo">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination comparative-characteristics__pagination"></div>
+                    <div class="comparative-characteristics__block-office-title">
+                        <p class="comparative-characteristics__block-title">Офис № 201</p>
+                        <div class="close comparative-characteristics__close">
+                            <span></span>
+                        </div>
+                        <div class="card-offices__description__content__elements comparative-characteristics__elements">
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Площадь</p>
+                                <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">этаж</p>
+                                <p class="card-offices__description-element__value">4</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Вид из окна</p>
+                                <p class="card-offices__description-element__value">Внутренний двор</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                <p class="card-offices__description-element__value">12 000 руб.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper comparative-characteristics__slider">
+                    <div class="swiper-wrapper comparative-characteristics__wrapper">
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/offices/03.svg" alt="office-photo">
+                        </div>
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/offices/03.svg" alt="office-photo">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination comparative-characteristics__pagination"></div>
+                    <div class="comparative-characteristics__block-office-title">
+                        <p class="comparative-characteristics__block-title">Офис № 201</p>
+                        <div class="close comparative-characteristics__close">
+                            <span></span>
+                        </div>
+                        <div class="card-offices__description__content__elements comparative-characteristics__elements">
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Площадь</p>
+                                <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">этаж</p>
+                                <p class="card-offices__description-element__value">4</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Вид из окна</p>
+                                <p class="card-offices__description-element__value">Внутренний двор</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                <p class="card-offices__description-element__value">12 000 руб.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper comparative-characteristics__slider">
+                    <div class="swiper-wrapper comparative-characteristics__wrapper">
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/office-project-02.svg" alt="office-photo">
+                        </div>
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/office-project-02.svg" alt="office-photo">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination comparative-characteristics__pagination"></div>
+                    <div class="comparative-characteristics__block-office-title">
+                        <p class="comparative-characteristics__block-title">Офис № 201</p>
+                        <div class="close comparative-characteristics__close">
+                            <span></span>
+                        </div>
+                        <div class="card-offices__description__content__elements comparative-characteristics__elements">
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Площадь</p>
+                                <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">этаж</p>
+                                <p class="card-offices__description-element__value">4</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Вид из окна</p>
+                                <p class="card-offices__description-element__value">Внутренний двор</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                <p class="card-offices__description-element__value">12 000 руб.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper comparative-characteristics__slider">
+                    <div class="swiper-wrapper comparative-characteristics__wrapper">
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/office-project-02.svg" alt="office-photo">
+                        </div>
+                        <div class="swiper-slide comparative-characteristics__slide">
+                            <img src="img/office-project-02.svg" alt="office-photo">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination comparative-characteristics__pagination"></div>
+                    <div class="comparative-characteristics__block-office-title">
+                        <p class="comparative-characteristics__block-title">Офис № 201</p>
+                        <div class="close comparative-characteristics__close">
+                            <span></span>
+                        </div>
+                        <div class="card-offices__description__content__elements comparative-characteristics__elements">
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Площадь</p>
+                                <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">этаж</p>
+                                <p class="card-offices__description-element__value">4</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">Вид из окна</p>
+                                <p class="card-offices__description-element__value">Внутренний двор</p>
+                            </div>
+                            <div class="card-offices__description-element comparative-characteristics__element">
+                                <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                <p class="card-offices__description-element__value">12 000 руб.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/modal.js"></script>
+<script src="script.js"></script>
+<script src="js/slider.js"></script>
+</body>
+</html>

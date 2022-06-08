@@ -1,0 +1,93 @@
+.comparative-characteristics {
+    margin-top: 50px;
+}
+.comparative-characteristics__delete-block {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #8E8E8E;
+    font-weight: 500;
+    background-color: #fff;
+}
+.comparative-characteristics__delete-block img {
+    margin-right: 10px;
+}
+.comparative-characteristics__delete-block__title {
+    margin-left: 10px;
+}
+.comparative-characteristics__slider {
+   min-width: 33.3333% !important;
+   display: flex;
+   flex-direction: column;
+  }
+.comparative-characteristics__body {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    overflow-x: auto;
+}
+  .comparative-characteristics__slide {
+      position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .comparative-characteristics__slide img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    max-height: 200px;
+  }
+  .comparative-characteristics__pagination .swiper-pagination-bullet {
+      width: 45px !important;
+      height: 1.5px !important;
+      background-color: #136644 !important;
+  }
+  .comparative-characteristics__block-office-title {
+      position: relative;
+      margin-top: 35px;
+  }
+ .comparative-characteristics__elements {
+     display: flex !important;
+     flex-direction: column !important;
+     
+ }
+ .comparative-characteristics__element {
+     width: 100%;
+     margin-top: 0 !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E5E5E5;
+ }
+ .comparative-characteristics__close {
+     top: 3px;
+     margin-left: 20px;
+ }
+ .comparative-characteristics__block-title {
+     position: relative !important;
+     font-size: 18px;
+     color: #000;
+     font-weight: 700;
+     border-bottom: 1px solid #E5E5E5;
+     padding-bottom: 15px;
+ }
+ .comparative-characteristics__pagination {
+     top: 36% !important;
+ }

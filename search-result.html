@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Офисный центр</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/search-result.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo logo"><img src="/img/logo.svg" alt="logo"></a>
+                <nav class="nav">
+                    <div class="close close-menu">
+                        <span></span>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="available-offices.html" class="nav__link">Доступные офисы</a></li>
+                        <li class="nav__item"><a href="photo-gallery.html" class="nav__link">ФОТОГАЛЕРЕЯ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">ОБ ОФИСНОМ ЦЕНТРЕ</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <a href="#" class="header__like-office like-office"><img src="/img/like.svg" alt="like">
+                        <span class="like-office__number">3</span>
+                    </a>
+                    <a href="#" class="header__location location"><img src="/img/location.svg" alt="location">
+                        <div class="location__text">
+                            <p class="location__address">ул. Вавилова, 62В</p>
+                            <span class="location__city">г. Ростов-на-Дону</span>
+                        </div>
+                    </a>
+                    <button class="header__btn-callback btn-callback" type="button">Заказать звонок</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal-callback">
+        <div class="modal__content">
+            <div class="close modal-callback__close">
+                <span></span>
+            </div>
+            <p class="modal-callback__title">Заказать звонок</p>
+            <form action="" class="modal-callback__form">
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваше имя</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваше имя">
+                </div>
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваш телефон</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваш номер">
+                </div>
+                <button class="modal-callback__btn btn-green" type="submit">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="filter">
+        <div class="container">
+            <div class="filter__content">
+                 <form action="" class="filter-form">
+                     <div class="filter-area filter-block">
+                         <p class="filter-name">Площадь</p>
+                         <div class="filter-block__inputs">
+                             <div class="filter-input__block-one input-border">
+                                 <span class="filter-input__placeholder">от</span>
+                                 <input class="input-one" type="text" placeholder="0">
+                                 <span class="filter-input__placeholder-toue">м<span>2</span></span>
+                             </div>
+                             <div class="filter-input__block-one filter-input__block-toue">
+                                 <span class="filter-input__placeholder">до</span>
+                                 <input type="text" placeholder="60">
+                                 <span class="filter-input__placeholder-toue">м<span>2</span></span>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="filter-dropdown">
+                         <p class="filter-name">Этаж</p>
+                         <button type="button" class="dropdown__btn">1 этаж<i class="arrow down filter-arrow"></i></button>
+                         <div class="filter-dropdown__content">
+                             <input id="filter-01-drop" type="checkbox" class="filter-input-check"><label for="filter-01-drop" class="filter-checkbox">Любой</label>
+                             <input id="filter-02-drop" type="checkbox" class="filter-input-check"><label for="filter-02-drop" class="filter-checkbox">1 этаж</label>
+                             <input id="filter-03-drop" type="checkbox" class="filter-input-check"><label for="filter-03-drop" class="filter-checkbox">2 этаж</label>
+                             <input id="filter-04-drop" type="checkbox" class="filter-input-check"><label for="filter-04-drop" class="filter-checkbox">3 этаж</label>
+                             <input id="filter-05-drop" type="checkbox" class="filter-input-check"><label for="filter-05-drop" class="filter-checkbox">4 этаж</label>
+                             <input id="filter-06-drop" type="checkbox" class="filter-input-check"><label for="filter-06-drop" class="filter-checkbox">5 этаж</label>  
+                         </div>                                                    
+                     </div>
+                     <div class="filter-area filter-block">
+                         <p class="filter-name">Стоимость аренды в мес.</p>
+                         <div class="filter-block__inputs">
+                             <div class="filter-input__block-one input-border">
+                                 <span class="filter-input__placeholder">от</span>
+                                 <input class="input-one" type="text" placeholder="0">
+                             </div>
+                             <div class="filter-input__block-one filter-input__block-toue">
+                                 <span class="filter-input__placeholder">до</span>
+                                 <input type="text" placeholder="20000">
+                             </div>
+                         </div>
+                     </div>
+                     <div class="filter-dropdown">
+                         <p class="filter-name">вид из окна</p>
+                         <button type="button" class="dropdown__btn dropdown__btn-02">Внутренний двор<i class="arrow down filter-arrow"></i></button>
+                         <div class="filter-dropdown__content">
+                             <input id="filter-07-drop" type="checkbox" class="filter-input-check"><label for="filter-07-drop" class="filter-checkbox">Любой</label>
+                             <input id="filter-08-drop" type="checkbox" class="filter-input-check"><label for="filter-08-drop" class="filter-checkbox">1 этаж</label>
+                             <input id="filter-09-drop" type="checkbox" class="filter-input-check"><label for="filter-09-drop" class="filter-checkbox">2 этаж</label>
+                             <input id="filter-10-drop" type="checkbox" class="filter-input-check"><label for="filter-10-drop" class="filter-checkbox">3 этаж</label>
+                             <input id="filter-11-drop" type="checkbox" class="filter-input-check"><label for="filter-11-drop" class="filter-checkbox">4 этаж</label>
+                             <input id="filter-12-drop" type="checkbox" class="filter-input-check"><label for="filter-12-drop" class="filter-checkbox">5 этаж</label>  
+                         </div>                                                    
+                     </div>
+                     <input type="submit" value="Поиск" class="filter__btn btn-green">
+                     <button type="button" class="filter__btn btn-green btn-open-filter">ИСКАТЬ ЗАНОВО</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+  
+
+    <div class="search-result">
+        <div class="container">
+            <div class="search-result__content">
+                <p class="no-result">К сожалению, под запрашиваемые параметры в данный момент свободных офисов нет, но мы можем предложить Вам эти варианты:</p>
+                <div class="search-result__title-block title-block">
+                    <p class="title">Результаты поиска</p>
+                    <div action="" class="sorting">
+                        <span class="sorting__title">Сортировка:</span>
+                        <form action="" class="sorting-form">
+                            <button type="button" class="dropdown__btn search-result__drop-btn">цена минимальная <i class="arrow down search-result__btn-arrow"></i></button>
+                            <div class="sorting__drop-content">
+                                <ul class="sorting__drop-content__list">
+                                    <li class="sorting__drop-content__item"><a href="" class="sorting__drop-content__link">Максимальная цена</a></li>
+                                    <li class="sorting__drop-content__item"><a href="" class="sorting__drop-content__link">Минимальная цена</a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+            </div>
+            <div class="inner-result">
+                <p class="title">Возможно, Вас заинтересуют эти офисы:</p>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+                <div class="card-offices">
+                    <div class="card-offices__content">
+                        <div class="card-offices__description">
+                            <div class="card-offices__description__content">
+                                <p class="card-offices__title">Офис № 211</p>
+                                <div class="card-offices__description__content__elements">
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Площадь</p>
+                                        <p class="card-offices__description-element__value">32,2 м<span class="meter-card">2</span></p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">этаж</p>
+                                        <p class="card-offices__description-element__value">4</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">Вид из окна</p>
+                                        <p class="card-offices__description-element__value">Внутренний двор</p>
+                                    </div>
+                                    <div class="card-offices__description-element">
+                                        <p class="card-offices__description-element__title">стоимость аренды в мес.</p>
+                                        <p class="card-offices__description-element__value">12 000 руб.</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="card-offices__btns">
+                                    <a href="" class="card-offices__more">ПОДРОБНЕЕ</a>
+                                    <div class="card-offices__favorites-book">
+                                        <button type="submit" class="btn-green card-offices__btn-book">ЗАБРОНИРОВАТЬ</button>
+                                        <button type="submit" class="card-offices__btn-favorites"><img src="img/card-like.svg" alt="office-favorites"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-img swiper card-mobile-slider">
+                                <div class="swiper-wrapper card-mobile-wrapper">
+                                    <div class="swiper-slide card-mobile-slide">
+                                        <img src="img/offices/01.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/02.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/03.svg" class="card-img__main-photo" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/04.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/05.svg" alt="office-photo">
+                                    </div>
+                                    <div class="swiper-slide  card-mobile-slide">
+                                        <img src="img/offices/06.svg" alt="office-photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next card-mobile-btn-next"></div>
+                                <div class="swiper-button-prev card-mobile-btn-prev"></div>
+                            </div>
+                            <div class="card-offices__slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper card-small-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                            <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                            <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                    <div class="close card-slider__close">
+                                        <span></span>
+                                    </div>
+                                    <div class="swiper-button-next card-slider-next"><img src="img/arrow-right.svg"></div>
+                                    <div class="swiper-button-prev card-slider-prev"><img src="img/arrow-left.svg"></div>
+                                    </div>
+                                    <div thumbsSlider="" class="swiper card-big-slide">
+                                    <div class="swiper-wrapper card-slider-wrapper">
+                                        <div class="swiper-slide card-office__slide">
+                                        <img src="img/offices/01.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/02.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/03.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/04.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/05.svg" />
+                                        </div>
+                                        <div class="swiper-slide  card-office__slide">
+                                        <img src="img/offices/06.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/modal.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Офисный центр</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/building-project.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" class="header__logo logo"><img src="/img/logo.svg" alt="logo"></a>
+                <nav class="nav">
+                    <div class="close close-menu">
+                        <span></span>
+                    </div>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="available-offices.html" class="nav__link">Доступные офисы</a></li>
+                        <li class="nav__item"><a href="photo-gallery.html" class="nav__link">ФОТОГАЛЕРЕЯ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">ОБ ОФИСНОМ ЦЕНТРЕ</a></li>
+                        <li class="nav__item"><a href="contacts.html" class="nav__link">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+                <div class="header__right">
+                    <a href="#" class="header__like-office like-office"><img src="/img/like.svg" alt="like">
+                        <span class="like-office__number">3</span>
+                    </a>
+                    <a href="#" class="header__location location"><img src="/img/location.svg" alt="location">
+                        <div class="location__text">
+                            <p class="location__address">ул. Вавилова, 62В</p>
+                            <span class="location__city">г. Ростов-на-Дону</span>
+                        </div>
+                    </a>
+                    <button class="header__btn-callback btn-callback" type="button">Заказать звонок</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal-callback">
+        <div class="modal__content">
+            <div class="close modal-callback__close">
+                <span></span>
+            </div>
+            <p class="modal-callback__title">Заказать звонок</p>
+            <form action="" class="modal-callback__form">
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваше имя</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваше имя">
+                </div>
+                <div class="modal-callback__block-input">
+                    <p class="modal-callback__input-title">Ваш телефон</p>
+                    <input type="text" class="modal-callback__input" placeholder="Введите ваш номер">
+                </div>
+                <button class="modal-callback__btn btn-green" type="submit">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="building-project">
+        <div class="container">
+            <div class="building-project__content">
+                <div class="building-project__block-title">
+                    <p class="title building-project__title">3 этаж</p>
+                    <div class="available-offices__block">
+                        <div class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">НА ГЛАВНУЮ</a></li>
+                            </ul>
+                        </div>
+                        <p class="available-offices__title">Доступные офисы: <span>8</span></p>
+                        <img class="building-project__compass" src="img/building-project/02.svg" alt="compass">
+                    </div>
+                  
+                </div>
+                <img class="building-project__img" src="/img/building-project/03.svg" alt="building-project">
+                <div class="office-open-block">
+                    <div class="office-open">
+                        <span></span>
+                        <p class="office-open__title">доступен</p>
+                    </div>
+                    <div class="office-close">
+                        <span></span>
+                        <p class="office-open__title">сдан</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+<script src="js/modal.js"></script>
+</body>
+</html>

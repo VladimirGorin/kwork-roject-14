@@ -1,0 +1,64 @@
+.building-project {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.available-offices__block {
+    display: flex;
+    margin-top: 35px;
+}
+
+.available-offices__title {
+    margin-left: 55px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+}
+.available-offices__title span {
+    display: inline-block;
+    color: #136644;
+    margin-left: 10px;
+}
+.building-project__compass {
+    margin-top: -85px;
+    margin-left: 150px;
+    max-width: 100%;
+    object-fit: cover;
+}
+.building-project__img {
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.office-open-block {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.office-open span, .office-close span {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 8px;
+}
+.office-open span {
+    background-color: #BBE2CA;
+}
+.office-close span {
+    background-color: #FEBEBF;
+}
+.office-open, .office-close {
+   display: flex;
+   align-items: center;
+}
+.office-close {
+    margin-left: 25px;
+}
+.office-open__title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+}
